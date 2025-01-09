@@ -5,7 +5,8 @@
 ```
 yarn
 ```
-3. Levantar el proyecto
+3. Renombra el archivo env.template por env.
+4. Levantar el proyecto
 ```
 yarn dev
 ```

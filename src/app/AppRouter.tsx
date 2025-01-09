@@ -4,6 +4,8 @@ import { AuthRoutes, MovieRoutes } from "../modules/router";
 export const AppRouter = () => {
   const authStatus = "authenticated";
 
+
+
   return (
     <Routes>
       {authStatus === "not-authenticated" && (
@@ -21,3 +23,4 @@ export const AppRouter = () => {
     </Routes>
   );
 };
+
