@@ -1,12 +1,14 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { AuthRoutes, MovieRoutes } from "../modules/router";
 import { useSelector } from "react-redux";
-import { authSlice } from '../modules/auth/authSlice';
+import { RootState } from "./store";
+
+
+
 
 export const AppRouter = () => {
-  const authStatus = "not-authenticated";
-  const {} = useSelector(state => state.authSlice)
 
+  const {authStatus} = useSelector((state: RootState) => state.getUser)
 
   return (
     <Routes>
