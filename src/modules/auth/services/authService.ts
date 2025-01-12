@@ -1,33 +1,13 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { getEnvVariables } from "../../../shared/utils";
+import {
+  CredentialProps,
+  RegisterProps,
+  RegisterResponse,
+  UserProps,
+} from "../types";
 
 const { VITE_API_URL } = getEnvVariables();
-
-// Tipos para el usuario y credenciales
-interface UserProps {
-  id: string;
-  email: string;
-  token: string;
-}
-
-interface CredentialProps {
-  email: string;
-  password: string;
-}
-
-// Tipos para los datos de registro (puedes extender según lo que requiera tu API)
-interface RegisterProps {
-  email: string;
-  password: string;
-  name?: string; // Si tu API espera un nombre u otros campos opcionales
-}
-
-// Tipos para la respuesta del registro
-interface RegisterResponse {
-  id: string;
-  email: string;
-  token: string;
-}
 
 export const authApi = createApi({
   reducerPath: "auth",
