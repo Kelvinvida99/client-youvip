@@ -22,7 +22,7 @@ export const authApi = createApi({
       query: (credentials) => ({
         url: "/auth/login",
         method: "POST",
-        body: credentials, // Correo y contraseña
+        body: credentials,
       }),
     }),
 
@@ -31,7 +31,7 @@ export const authApi = createApi({
       query: (userData) => ({
         url: "/auth/register",
         method: "POST",
-        body: userData, // Datos del usuario
+        body: userData,
       }),
     }),
   }),

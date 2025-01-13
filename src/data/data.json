@@ -1,0 +1,88 @@
+[
+	{
+		"id": "a7d3b2e8-93f1-4823-bd3d-62c7920eb497",
+		"title": "The Matrix",
+		"description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+		"movieUrl": "https://www.imdb.com/title/tt0133093/",
+		"genre": [
+			"Action",
+			"Sci-Fi",
+			"Thriller"
+		],
+		"releaseDate": "1999-03-31",
+		"rating": 8.7,
+		"runtime": 136,
+		"posterUrl": "https://m.media-amazon.com/images/M/MV5BNGE1YzI4NzMtZTUxNi00Y2I5LTg2MmQtODE0NThmYTFmMDk0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+		"cast": [
+			"Keanu Reeves",
+			"Laurence Fishburne",
+			"Carrie-Anne Moss"
+		],
+		"directors": [
+			"Lana Wachowski",
+			"Lilly Wachowski"
+		],
+		"writers": [
+			"Lana Wachowski",
+			"Lilly Wachowski"
+		],
+		"user": null
+	},
+	{
+		"id": "b5f6c7a1-2e14-4df9-a344-19dc784e60a7",
+		"title": "Interstellar",
+		"description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+		"movieUrl": "https://www.imdb.com/title/tt0816692/",
+		"genre": [
+			"Adventure",
+			"Drama",
+			"Sci-Fi"
+		],
+		"releaseDate": "2014-11-07",
+		"rating": 8.6,
+		"runtime": 169,
+		"posterUrl": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_.jpg",
+		"cast": [
+			"Matthew McConaughey",
+			"Anne Hathaway",
+			"Jessica Chastain"
+		],
+		"directors": [
+			"Christopher Nolan"
+		],
+		"writers": [
+			"Jonathan Nolan",
+			"Christopher Nolan"
+		],
+		"user": null
+	},
+	{
+		"id": "f6a8d9c4-89b1-4d7b-9a7f-92d92e0e4a45",
+		"title": "The Dark Knight",
+		"description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+		"movieUrl": "https://www.imdb.com/title/tt0468569/",
+		"genre": [
+			"Action",
+			"Crime",
+			"Drama"
+		],
+		"releaseDate": "2008-07-18",
+		"rating": 9.0,
+		"runtime": 152,
+		"posterUrl": "https://m.media-amazon.com/images/M/MV5BN2U3NmZjMTYtY2JhOS00NzU4LWJkMDAtZjFmZjAyN2ZlMTMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+		"cast": [
+			"Christian Bale",
+			"Heath Ledger",
+			"Aaron Eckhart"
+		],
+		"directors": [
+			"Christopher Nolan"
+		],
+		"writers": [
+			"Jonathan Nolan",
+			"Christopher Nolan",
+			"David S. Goyer"
+		],
+		"user": null
+	}
+]

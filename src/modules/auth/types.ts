@@ -3,7 +3,6 @@ export interface Credential {
   password: string;
 }
 
-// Tipos para el usuario y credenciales
 export interface UserProps {
   id: string;
   email: string;
@@ -15,16 +14,19 @@ export interface CredentialProps {
   password: string;
 }
 
-// Tipos para los datos de registro (puedes extender según lo que requiera tu API)
 export interface RegisterProps {
   email: string;
   password: string;
-  name?: string; // Si tu API espera un nombre u otros campos opcionales
+  fullName: string;
 }
 
-// Tipos para la respuesta del registro
+type UserRole = "user" | "admin" | "moderator";
+
 export interface RegisterResponse {
-  id: string;
   email: string;
+  fullName: string;
+  id: string;
+  isActive: boolean;
+  roles: UserRole[];
   token: string;
 }

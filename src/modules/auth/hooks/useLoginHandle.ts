@@ -4,10 +4,12 @@ import { useLoginMutation } from "../services";
 import { useDispatch } from "react-redux";
 
 export const useLoginHandler = () => {
-
   const [login] = useLoginMutation();
   const dispatch = useDispatch();
-  const [credentials, setCredentials] = useState<{ email: string, password: string } | null>(null);
+  const [credentials, setCredentials] = useState<{
+    email: string;
+    password: string;
+  } | null>(null);
 
   useEffect(() => {
     if (credentials) {
