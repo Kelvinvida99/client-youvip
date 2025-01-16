@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MovieCardProps } from "../../types";
+import { MovieCardProps } from "../../../types";
 
 export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   return (
@@ -16,7 +16,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         <div className="btn-container">
           <a href="#">Learn more</a>
-          <Link className="link" to="/movie/sala">
+          <Link className="link" to="/movie/theater">
             <i className="bi bi-play-fill"></i> Play
           </Link>
         </div>

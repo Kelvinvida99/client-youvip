@@ -1,7 +1,8 @@
-import { MovieCard, MovieInfoCard, Navbar } from "../../../shared/components";
+import { Navbar } from "../../../shared/components";
 import { HomeLayout } from "../../../shared/layouts";
 import "./styles/MoviePage.css";
 import movies from "../../../data/data.json";
+import { MovieCard, MovieInfoCard } from "../components";
 
 export const MoviePage = () => {
   return (

@@ -1,4 +1,2 @@
-export * from './NavTopper'
-export * from './Navbar'
-export * from './MovieInfoCard'
-export * from './MovieCard'
+export * from "./NavTopper";
+export * from "./Navbar";

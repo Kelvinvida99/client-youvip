@@ -1,0 +1,12 @@
+.voomly-embed {
+  width: 100%;
+  -webkit-aspect-ratio: 1.77778 / 1;
+  -moz-aspect-ratio: 1.77778 / 1;
+  aspect-ratio: 1.77778 / 1;
+  background: linear-gradient(
+    45deg,
+    rgb(142, 150, 164) 0%,
+    rgb(201, 208, 222) 100%
+  );
+  border-radius: 10px;
+}
