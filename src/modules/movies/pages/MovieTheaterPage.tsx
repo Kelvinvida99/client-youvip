@@ -4,10 +4,14 @@ import { MovieTheaterLayout } from "../../../shared/layouts";
 import "./styles/MovieTheaterPage.css";
 import "./styles/VoomlyEmbed.css";
 import { Navbar } from "../../../shared/components/Navbar";
+import { useLocation } from "react-router-dom";
 
 const { VITE_SECRET_VOOMLY } = getEnvVariables();
 
 export const MovieTheaterPage = () => {
+  const location = useLocation();
+  const { movie } = location.state || {};
+
   useEffect(() => {
     if (!VITE_SECRET_VOOMLY) {
       console.error("SECRET_VOOMLY no está definida");
@@ -31,33 +35,39 @@ export const MovieTheaterPage = () => {
       </nav>
       <section className="movie-post-section">
         <div className="movie-post">
-          <img
-            src="https://m.media-amazon.com/images/M/MV5BMWQ4YWYxYTAtZTlhNC00Nzc3LWE3OWUtZjY5MThlNWNiYTBiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-            alt="post"
-          />
+          <img src={movie.posterUrl} alt="post" />
         </div>
       </section>
       <section className="movie-section">
-        <div className="movie-container">
-          <div
-            className="voomly-embed"
-            data-id="Bo3sXsozPj1gOi1gb1NZi4huAWxmImDDlB2JFWYSYNEmZgBer"
-            data-ratio="1.777778"
-            data-type="v"
-            data-skin-color="#008EFF"
-            data-shadow=""
-          ></div>
-        </div>
+        <div
+          className="movie-container"
+          dangerouslySetInnerHTML={{ __html: movie.movieUrl }}
+        ></div>
       </section>
       <section className="movie-description-section">
+        <div className="title-container">
+          <div className="title-info-container">
+            <h3>{movie.title}</h3>
+            <span>{movie.rating}</span>
+          </div>
+          <p>Duration: {movie.runtime} min</p>
+          <p>
+            {movie.genre?.map((genders: string) => (
+              <span key={movie.id}>{genders} </span>
+            ))}
+          </p>
+        </div>
         <div className="description-container">
           <h3>Description:</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            consectetur magnam vero minima error doloribus deleniti similique
-            harum, pariatur ducimus, quaerat aut eius distinctio et, commodi ab
-            animi itaque id!
-          </p>
+          <p>{movie.description}</p>
+        </div>
+        <div className="actors-container">
+            <h3>Actors:</h3>
+            <ul>{movie.cast?.map((actor: string) => (<li key={movie.id}>{actor}</li>))}</ul>
+        </div>
+        <div className="directors-container">
+            <h3>Directors:</h3>
+            <ul>{movie.directors?.map((director: string) => (<li key={movie.id}>{director}</li>))}</ul>
         </div>
       </section>
       <section className="movie-list-section">
