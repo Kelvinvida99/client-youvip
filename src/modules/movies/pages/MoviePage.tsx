@@ -1,4 +1,4 @@
-import { Navbar } from "../../../shared/components";
+import { Navbar, Sidebar } from "../../../shared/components";
 import { HomeLayout } from "../../../shared/layouts";
 import "./styles/MoviePage.css";
 import movies from "../../../data/data.json";
@@ -10,6 +10,7 @@ export const MoviePage = () => {
       <main className="main-home-container">
         <section className="navbar-section">
           <Navbar />
+          <Sidebar />
         </section>
         <section className="abs-section">
           <div className="abs"></div>
