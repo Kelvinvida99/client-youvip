@@ -23,7 +23,7 @@ export const Navbar = () => {
         <ul className="navbar-container">
           <li className="active">For you</li>
           <li>Movies</li>
-          <li>TV Shows</li>
+          <li>Series</li>
           <li>TATA IPL</li>
           <li>New Release</li>
         </ul>
