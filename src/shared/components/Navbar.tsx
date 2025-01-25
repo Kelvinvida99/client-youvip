@@ -21,11 +21,11 @@ export const Navbar = () => {
         </div>
 
         <ul className="navbar-container">
-          <li className="active">For you</li>
-          <li>Movies</li>
+          <li className="active">Movies</li>
           <li>Series</li>
-          <li>TATA IPL</li>
-          <li>New Release</li>
+          <li>Animacion</li>
+          <li>Anime</li>
+          <li>Sport</li>
         </ul>
 
         <div className="notification-container">
