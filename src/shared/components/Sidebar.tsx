@@ -10,7 +10,7 @@ export const Sidebar = () => {
   };
 
   return (
-    <main className="main">
+    <main className="sidebar-main">
       <section className="navbar">
         <div className="navbar-container">
           <i className="bi bi-list" onClick={toggleMenu}></i>

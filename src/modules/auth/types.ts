@@ -30,3 +30,24 @@ export interface RegisterResponse {
   roles: UserRole[];
   token: string;
 }
+
+type Data = {
+  error: string,
+  message: string[],
+  statusCode: number,
+}
+
+export interface ResponseError {
+  data: Data;
+  status: number
+}
+
+type Credentials = {
+  fullName: string;
+  email: string;
+  password: string;
+};
+
+export type CredentialsState = Credentials | { error: unknown } | null;
+
+export type CredentialsLogin = CredentialProps | { error: unknown } | null;

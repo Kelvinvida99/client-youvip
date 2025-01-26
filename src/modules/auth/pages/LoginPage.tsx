@@ -10,11 +10,17 @@ export const LoginPage = () => {
     password: "",
   });
   
-  const { handleLogin } = useLoginHandler();
+  const { handleLogin, credentials } = useLoginHandler();
+
+  let errorMessages: string[] = [];
+
+  if (credentials && 'error' in credentials) {
+    errorMessages = (credentials.error as any)?.data.message;
+    console.log( errorMessages );
+  }
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Email:", email, "Password:", password);
     handleLogin( email, password );
     onResetForm();
   };
@@ -46,6 +52,10 @@ export const LoginPage = () => {
             <Link to="/auth/register">Create account</Link>
           </div>
         </form>
+
+        <div className="alert-info">
+          {errorMessages?.map((error) => (<span key={error}>{error}. </span>))}
+        </div>
       </div>
     </LoginLayout>
   );

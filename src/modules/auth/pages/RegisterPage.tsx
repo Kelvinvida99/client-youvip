@@ -11,12 +11,18 @@ export const RegisterPage = () => {
     password: "",
   });
 
-  const {handleRegister} = useRegisterHandler()
+  const { handleRegister, credentials } = useRegisterHandler();
+
+  let errorMessages: string[] = [];
+
+  if (credentials && 'error' in credentials) {
+    errorMessages = (credentials.error as any)?.data.message;
+    console.log( errorMessages );
+  }
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Email:", email, "Password:", password, "Full Name", fullName);
-    handleRegister({fullName, email, password})
+    handleRegister({ fullName, email, password });
     onResetForm();
   };
 
@@ -55,6 +61,10 @@ export const RegisterPage = () => {
             <Link to="/auth/login">Sign in</Link>
           </div>
         </form>
+
+        <div className="alert-info">
+          {errorMessages?.map((error) => (<span key={error}>{error}. </span>))}
+        </div>
       </div>
     </LoginLayout>
   );

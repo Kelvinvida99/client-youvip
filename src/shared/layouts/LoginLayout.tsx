@@ -9,7 +9,7 @@ export const LoginLayout = ({ children }: ChildrenProp) => {
       </section>
 
       <section className="section-form">
-        <div className="info-container">
+        <div className="login-info-container">
           <i className="bi bi-film"></i>
           <h1>Get more things done with Loggin platform.</h1>
           <p>

@@ -2,24 +2,24 @@ import { useEffect, useState } from "react";
 import { onLogin } from "../authSlice";
 import { useLoginMutation } from "../services";
 import { useDispatch } from "react-redux";
+import { CredentialsLogin } from "../types";
 
 export const useLoginHandler = () => {
   const [login] = useLoginMutation();
   const dispatch = useDispatch();
-  const [credentials, setCredentials] = useState<{
-    email: string;
-    password: string;
-  } | null>(null);
+  const [credentials, setCredentials] = useState<CredentialsLogin>(null);
 
   useEffect(() => {
     if (credentials) {
       const handleLogin = async () => {
         try {
-          const result = await login(credentials).unwrap();
-          console.log("Login successful:", result);
-          dispatch(onLogin(result));
-        } catch (err) {
-          console.error("Login failed:", err);
+          if ("email" in credentials && "password" in credentials) {
+            const result = await login(credentials).unwrap();
+            console.log("Login successful:", result);
+            dispatch(onLogin(result));
+          }
+        } catch (error) {
+          setCredentials({error})
         }
       };
 
@@ -32,5 +32,5 @@ export const useLoginHandler = () => {
     setCredentials({ email, password });
   };
 
-  return { handleLogin };
+  return { handleLogin, credentials };
 };

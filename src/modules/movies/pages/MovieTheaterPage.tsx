@@ -53,7 +53,7 @@ export const MovieTheaterPage = () => {
           <p>Duration: {movie.runtime} min</p>
           <p>
             {movie.genre?.map((genders: string) => (
-              <span key={movie.id}>{genders} </span>
+              <span key={genders}>{genders} </span>
             ))}
           </p>
         </div>
@@ -63,11 +63,11 @@ export const MovieTheaterPage = () => {
         </div>
         <div className="actors-container">
             <h3>Actors:</h3>
-            <ul>{movie.cast?.map((actor: string) => (<li key={movie.id}>{actor}</li>))}</ul>
+            <ul>{movie.cast?.map((actor: string) => (<li key={actor}>{actor}</li>))}</ul>
         </div>
         <div className="directors-container">
             <h3>Directors:</h3>
-            <ul>{movie.directors?.map((director: string) => (<li key={movie.id}>{director}</li>))}</ul>
+            <ul>{movie.directors?.map((director: string) => (<li key={director}>{director}</li>))}</ul>
         </div>
       </section>
       <section className="movie-list-section">

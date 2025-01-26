@@ -2,26 +2,27 @@ import { useEffect, useState } from "react";
 import { onRegister } from "../authSlice";
 import { useRegisterMutation } from "../services";
 import { useDispatch } from "react-redux";
-import { RegisterProps } from "../types";
+import { CredentialsState, RegisterProps } from "../types";
+
+
 
 export const useRegisterHandler = () => {
   const [register] = useRegisterMutation();
+
   const dispatch = useDispatch();
-  const [credentials, setCredentials] = useState<{
-    fullName: string;
-    email: string;
-    password: string;
-  } | null>(null);
+  const [credentials, setCredentials] = useState<CredentialsState>(null);
 
   useEffect(() => {
     if (credentials) {
       const handleRegister = async () => {
         try {
-          const result = await register(credentials).unwrap();
-          console.log("Login successful:", result);
-          dispatch(onRegister(result));
-        } catch (err) {
-          console.error("Login failed:", err);
+          if ('email' in credentials && 'password' in credentials && 'fullName' in credentials) {
+            const result = await register(credentials).unwrap();
+            console.log("Login successful:", result);
+            dispatch(onRegister(result));
+          }
+        } catch (error) {
+          setCredentials({ error })
         }
       };
 
@@ -29,10 +30,9 @@ export const useRegisterHandler = () => {
     }
   }, [credentials, register, dispatch]);
 
-  const handleRegister = ({email, password, fullName}: RegisterProps) => {
-    console.log(email);
+  const handleRegister = ({ email, password, fullName }: RegisterProps) => {
     setCredentials({ email, password, fullName });
   };
 
-  return { handleRegister };
+  return { handleRegister, credentials };
 };
