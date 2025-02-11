@@ -84,5 +84,34 @@
 			"David S. Goyer"
 		],
 		"user": null
+	},
+	{
+		"id": "f6a8d9c4-89b1-4d7b-9a7f-82d92e0e4a45",
+		"title": "The Dark Knight 2",
+		"description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+		"movieUrl": "<div class=\"voomly-embed\" data-id=\"AsZcFtDqOUDBglcV2EQ-utvfAAyGwTiyhwtQFdrHPabYEh0gX\" data-ratio=\"1.777778\" data-type=\"v\" data-skin-color=\"#008EFF\" data-shadow=\"\" style=\"width: 100%; aspect-ratio: 1.77778 / 1; background: linear-gradient(45deg, rgb(142, 150, 164) 0%, rgb(201, 208, 222) 100%); border-radius: 10px;\"></div>",
+		"genre": [
+			"Action",
+			"Crime",
+			"Drama"
+		],
+		"releaseDate": "2008-07-18",
+		"rating": 9.0,
+		"runtime": 152,
+		"posterUrl": "https://m.media-amazon.com/images/M/MV5BZmFkZTQ1NDktZWJjOC00ZTVjLTg0NmMtMmMzZDcxZmExNDE1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+		"cast": [
+			"Christian Bale",
+			"Heath Ledger",
+			"Aaron Eckhart"
+		],
+		"directors": [
+			"Christopher Nolan"
+		],
+		"writers": [
+			"Jonathan Nolan",
+			"Christopher Nolan",
+			"David S. Goyer"
+		],
+		"user": null
 	}
 ]
